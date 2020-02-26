@@ -7,7 +7,7 @@ https://zikretictactoe.netlify.com/
 
 ![tictactoe game](tic.png)
 
-##How I Made It
+## How I Made It
 
 ## Tech Used: This game was made using javascript, html & css
 
