@@ -1,0 +1,33 @@
+*{
+  box-sizing:border-box;
+}
+
+body{
+  background-color: beige;
+}
+
+h1{
+color: blue;
+}
+
+table{
+  border: black 2px solid;
+  height: 500px;
+  width: 500px;
+  /* background-color:# */
+  text-align: center;
+}
+
+
+td{
+  font-size: 10px;
+  border: 1px solid black;
+}
+
+.tableContainer{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
