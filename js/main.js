@@ -31,9 +31,6 @@
 //   [3, 5, 7],
 // ];
 
-
-
-
 // function Game() {
 //   this.gameState = {
 //     'box0': null,
@@ -55,15 +52,38 @@ const box5= document.getElementById('box5')
 const box6= document.getElementById('box6')
 const box7= document.getElementById('box7')
 const box8= document.getElementById('box8')
+let winLose = document.getElementById("result")
+
 
 function win(which){
-  alert ("winner"+ " " + which)
+  let winnerStatement = `The winner is: ${which}`;
+
+  winLose.innerHTML = winnerStatement
+  // alert ("winner"+ " " + which)
+  // document.querySelectorAll(".box").forEach( box => {
+  //     box.innerHTML = " "
+  // })
+}
+
+function clearBoard (){
   document.querySelectorAll(".box").forEach( box => {
       box.innerHTML = " "
   })
+  document.querySelectorAll("#result").forEach( box => {
+      box.innerHTML = " "
+  })
   counter = 0
-
+  winLose.innerHTML = ""
 }
+
+reset.addEventListener('click', clearBoard)
+
+undo.addEventListener('click', noGo)
+
+function noGo(){
+  alert("NO TAKE BACKS!!")
+}
+
 function checkWin(){
   if(box0.innerHTML !== " " &&  box0.innerHTML === box1.innerHTML && box1.innerHTML === box2.innerHTML){
     win(box0.innerHTML) // after alert call a function that clears the board &  //speciify if x win or O win  /// try to make both happen in one function /// remember to update the counter to 0
@@ -86,18 +106,27 @@ function checkWin(){
 
 function markBoxAndCheckWin(event){
   const box = event.target
+
   if(box.innerHTML === "O" || box.innerHTML === "X"){
     alert("NO!")
     return;
   }
+
   counter += 1
+  if(winLose.innerHTML===""){
   if (counter % 2 == 0 ){
     // game.gameState[box] = 'O'
     box.innerHTML= "O"
     // console.log ("0")
-  } else{
+  }else{
     // console.log ("X")
     box.innerHTML= "X"
+  // }if (totalBoxes === "X" || totalBoxes === "O"){
+  //   alert("Tie")
+  }
+}
+  if (counter === 9){
+    document.getElementById("result").innerHTML = 'Draw, You Both Lose?'
   }
   checkWin()
   // console.log(counter, box)

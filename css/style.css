@@ -13,11 +13,10 @@ color: blue;
 table{
   border: black 2px solid;
   height: 500px;
-  width: 500px;
+  width: 80%;
   /* background-color:# */
   text-align: center;
 }
-
 
 td{
   font-size: 10px;
@@ -30,4 +29,11 @@ td{
   justify-content: space-around;
   align-items: center;
   width: 100%;
+}
+.box{
+  width: 33.3333%;
+  font-size: 50px;
+}
+p{
+  font-size: 30px;
 }
