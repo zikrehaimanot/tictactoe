@@ -1,5 +1,5 @@
 # Simple tictactoe
-This is my attempt at recreating the childhood game of tictactoe
+This is our attempt at recreating the childhood game of tictactoe
 
 ## link to live site :
 
